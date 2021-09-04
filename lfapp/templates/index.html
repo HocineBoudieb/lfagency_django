@@ -3,12 +3,11 @@
 <head>
   {% load static %}
   <script src="{% static 'script.js' %}" defer></script>
-  <style>
-  .imgleft{
-    background-image: url("{{services.0.image.url}}");
-  }
-  </style>
   <script>
+    var img1 = "{{services.0.photo.url}}";
+    var img2 = '{{services.1.photo.url}}';
+    var img3 = "{{services.2.photo.url}}";
+    var img4 = "{{services.3.photo.url}}";
     var ds1 = "{{services.0.description}}";
     var ds2 = "{{services.1.description}}";
     var ds3 = "{{services.2.description}}";
@@ -39,11 +38,12 @@
         <a href="{{reseaux.CompteInsta}}"><span class="insta fab fa-instagram"></span>  {{reseaux.insta}}</a>
         <a href="{{reseaux.CompteYoutube}}"><span class="ytb fab fa-youtube"></span>  {{reseaux.youtube}}</a>
       </div>
-      <div id="divimg" class="imgleft"></div>
+      <div class="imgleft"><img id="divimg" class="imgleft" src="" alt="img"></img></div>
       </div>
     </div>
     <div class="droite">
     <p>Formulaire</p>
+    <p style="font-size: 12px; margin-bottom: 40px">ou contactez nous sur Instagram</p>
     <form id="myForm" action="https://formspree.io/f/xrgrywkr" method="post">
         <input type="text" id="fname" placeholder="Votre Nom" name="Prénom"><br><br>
         <input type="email" placeholder="Adresse e-mail" id="lname" name="email" required><br><br>
@@ -63,7 +63,7 @@
   <div id="total" class="cont">
     <div id="naav" class="nav">
     <ul class="navbar-default">
-        <li><a href="#LF">LifeStyle</a></li>
+        <li><a class="logoA" href="#LF"><img class="logo" src="{% static 'img/lfagency-logo.png'%}" alt="logo"}></a></li>
         <li><a href="#about">A propos</a></li>
         <li><a href="#services">Services</a></li>
         <li id="contactbtn"><a href="#contact">Contact</a></li>
@@ -80,21 +80,21 @@
       <!-- Wrapper for slides -->
       <div class="carousel-inner">
         <div class="item active">
-          <img class="zoom"src="{% static 'img/la.jpg' %}" alt="img1" style="width:100%; object-fit: contain; position:absolute;">
-          <div class="legend"><p>Amenez vos followers dans une vidéo immersion d'une journée décorée par le luxe</p><p>À partir de 80€</p></div>
+          <img class="zoom" src="{{carousel.0.image.url}}" alt="img1" style="width:100%; object-fit: contain; position:absolute;">
+          <div class="legend"><p>{{carousel.0.texte}}</p><p>À partir de {{carousel.0.prix}}€</p></div>
           <a class="btn" href="#services"> Plus de détails > </a>
           </div>
         <div class="item">
-          <img class="zoom"src="{% static 'img/chicago.jpg' %}" alt="img2" style="width:100%; object-fit: contain;">                           
-          <div class="legend"><p>Amenez vos followers dans une vidéo immersion d'une journée décorée par le luxe</p><p>À partir de 80€</p></div>
+          <img class="zoom"src="{{carousel.1.image.url}}" alt="img2" style="width:100%; object-fit: contain;">                           
+          <div class="legend"><p>{{carousel.1.texte}}</p><p>À partir de {{carousel.1.prix}}€</p></div>
           <a class="btn" href="#services"> Plus de détails > </a>
           <div class="carousel-caption" style="text-align: center; object-fit:cover;
           vertical-align: middle;">
           </div>
         </div>
         <div class="item">
-          <img class="zoom" src="{% static 'img/ny.jpg' %}" alt="img3" style="width:100%; object-fit: cover;">
-          <div class="legend"><p>Amenez vos followers dans une vidéo immersion d'une journée décorée par le luxe</p><p>À partir de 80€</p></div>
+          <img class="zoom" src="{{carousel.2.image.url}}" alt="img3" style="width:100%; object-fit: cover;">
+          <div class="legend"><p>{{carousel.2.texte}}</p><p>À partir de {{carousel.2.prix}}€</p></div>
           <a class="btn" href="#services"> Plus de détails > </a>
           <div class="carousel-caption">
           </div>
@@ -120,7 +120,7 @@
       <div class="deco"></div>
       <div class="ligneservice">
         <div>
-          <div id="Immersion" class="s"></div>
+          <div id="Immersion" class="s" style="backrground-image: url('{{services.1.photo.url}}')';"></div>
           <h4>{{services.0.title}}</h4>
         </div>
         <div>
@@ -130,11 +130,11 @@
       </div>
       <div class="ligneservice">
         <div>
-          <div id="Uber" class="s"></div>
+          <div id="Uber" class="s" style="b"></div>
           <h4>{{services.2.title}}</h4>
         </div>
         <div>
-          <div id="Air" class="s"></div>
+          <div id="Air" class="s" style="backrground"></div>
           <h4>{{services.3.title}}</h4>
         </div>
     </div>

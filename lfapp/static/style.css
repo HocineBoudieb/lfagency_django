@@ -2,7 +2,8 @@ body{
   position: relative;
   background-color: #F8F8F8;
   display: flex;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
   flex-direction: column;
   text-align: center;
 }
@@ -15,11 +16,20 @@ body{
 }
 .droite p{
   font-size: 30px;
-  margin-bottom: 50px;
+  margin-bottom: 5px;
+}
+.logo{
+  filter: brightness(100%);
+  margin-left: 10px;
+  height: 40px;
+  width: 40px;
 }
 .imgleft{
+  filter: brightness(100%);
   height: 30vh;
-  background-size: cover;
+  width: 40vw;
+  object-fit: cover
+  /*background-image: url("https://static.lexpress.fr/medias_10136/w_918,h_513,c_crop,x_0,y_122/w_1000,h_563,c_fill,g_north/v1602487529/voyagez-en-jet-prive-sans-trop-vous-ruiner-avec-le-co-avionnage_5190055.jpg");*/
 }
 .titre{
   font-size: 30px;
@@ -152,8 +162,14 @@ li {
   margin: 0;
   float: left;
 }
+.logoA{
+  margin-left: 5px;
+  padding: 0;
+  margin-right: 30px;
+}
 
 li a {
+  margin-top: 5px;
   margin-right: 30px;
   display: inline-block;
   font-size: 15px;
@@ -166,7 +182,8 @@ li a {
 
 /* Change the link color to #111 (black) on hover */
 li a:hover {
-  color: #565656;
+  filter: brightness(70%);
+  color: white;
   text-decoration: none;
 }
 h3{
@@ -174,7 +191,7 @@ h3{
 }
 .deco{
   margin-left: 35vw;
-  margin-bottom: 2vh;
+  margin-bottom: 6vh;
   height: 2vh;
   background-color: transparent;
   width: 30vw;
@@ -321,6 +338,10 @@ textarea{
 }
 @media screen and (max-width:1000px){
 
+  .logo{
+    height: 30px;
+    width: 30px;
+  }
   .socialntwrks a{
     font-size: 9px;
   }

@@ -5,7 +5,8 @@ from django.db.models.fields import URLField
 class Services(models.Model):
     title = models.CharField(max_length=15)
     description = models.CharField(max_length=450)
-    photo = models.ImageField(upload_to= 'img/', blank=True)
+    icon = models.ImageField(blank=True)
+    photo = models.ImageField(blank=True)
 
     def __str__(self):
         return self.title
@@ -23,7 +24,7 @@ class Carousel(models.Model):
     titre = models.CharField(max_length=15,default='par défaut')
     texte = models.CharField(max_length=100)
     prix = models.IntegerField(default=0)
-    image = models.ImageField(upload_to='img/')
+    image = models.ImageField()
 
     def __str__(self):
         return self.titre
