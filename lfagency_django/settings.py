@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-fp_zus#)d4iv-mbg2%ip-z)cewj_h##^t@-(^oxo7pknkydoi)
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-ALLOWED_HOSTS = ["lfagency.herokuapp.com"]
+ALLOWED_HOSTS = ["lfagency.herokuapp.com",'127.0.0.1']
 
 
 # Application definition
@@ -144,6 +144,7 @@ if os.environ.get('ENV') == 'PRODUCTION':
     STATICFILES_DIRS = (
         os.path.join(PROJECT_ROOT, 'static'),
     )
+    MEDIAFILES_DIRS = (MEDIA_ROOT)
     db_from_env = dj_database_url.config(conn_max_age=500)
     DATABASES['default'].update(db_from_env)
     

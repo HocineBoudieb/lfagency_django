@@ -241,6 +241,12 @@ h3{
   width: 150px;
   background-color: #E5E5E5;
 }
+.chi img{
+  object-fit: cover;
+  height: 150px;
+  width: 150px;
+  filter: brightness(100%);
+}
 form{
     display: inline-block;
     text-align: left;
@@ -291,8 +297,15 @@ textarea{
   height: 15vw;
   border-radius: 10px;
 }
+.s img{
+  border-radius: 10px;
+  height: 15vw;
+  width: 15vw;
+  object-fit: cover;
+  filter: brightness(100%);
+}
 .s:hover{
-  box-shadow: 0 0 11px rgba(33,33,33,.2);
+  box-shadow: 0 0 15px rgba(33,33,33,.2);
 }
 .legend {
   width: 80vw;
@@ -337,7 +350,10 @@ textarea{
   color: #ad8900;
 }
 @media screen and (max-width:1000px){
-
+  .s img{
+    height: 25vw;
+    width: 25vw;
+  }
   .logo{
     height: 30px;
     width: 30px;
@@ -427,9 +443,14 @@ textarea{
     height: 25vw;
     width: 25vw;
   }
+
   .chi{
     margin-bottom: 0;
     font-size: 11px;
+    width: 15vh;
+    height: 15vh;
+  }
+  .chi img{
     width: 15vh;
     height: 15vh;
   }

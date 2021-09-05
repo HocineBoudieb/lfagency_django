@@ -63,7 +63,7 @@
   <div id="total" class="cont">
     <div id="naav" class="nav">
     <ul class="navbar-default">
-        <li><a class="logoA" href="#LF"><img class="logo" src="{% static 'img/lfagency-logo.png'%}" alt="logo"}></a></li>
+        <li><a class="logoA" href="#LF"><img class="logo" src="{% static 'img/lfagency-logo.png'%}" alt="logo"></a></li>
         <li><a href="#about">A propos</a></li>
         <li><a href="#services">Services</a></li>
         <li id="contactbtn"><a href="#contact">Contact</a></li>
@@ -110,8 +110,8 @@
 
   <p> Suspendisse hendrerit nunc id mauris viverra viverra. Integer lobortis mauris nec elit mollis sodales. Suspendisse elit tellus, aliquam vel quam non, eleifend elementum risus.Donec in elementum sapien, eget luctus ex. Sed a finibus lacus, eu fermentum elit. Morbi maximus pretium augue sit amet facilisis. Nam tristique leo sed lorem aliquet, sed dapibus dolor faucibus. Suspendisse nec odio eros. Phasellus pellentesque, lacus vel placerat dapibus, libero magna interdum justo, nec vestibulum neque lectus vitae mi. Maecenas pharetra erat vitae nulla aliquam pretium. Duis a faucibus nisi.</p>
   <div class="chiffre">
-        <div class="chi"></div>
-        <div class="chi"></div>
+        <div class="chi"><img src="{% static 'img/lfagency-logo.png'%}" alt="logo"></div>
+        <div class="chi"><img src="{% static 'img/lfagency-logo.png'%}" alt="logo"></div>
       </div>
       </div>
     </div>
@@ -120,21 +120,21 @@
       <div class="deco"></div>
       <div class="ligneservice">
         <div>
-          <div id="Immersion" class="s" style="backrground-image: url('{{services.1.photo.url}}')';"></div>
+          <div id="Immersion" class="s"><img src="{{services.0.icon.url}}"></div>
           <h4>{{services.0.title}}</h4>
         </div>
         <div>
-          <div id="Prestige" class="s"></div>
+          <div id="Prestige" class="s"><img src="{{services.1.icon.url}}"></div>
           <h4>{{services.1.title}}</h4>
         </div>
       </div>
       <div class="ligneservice">
         <div>
-          <div id="Uber" class="s" style="b"></div>
+          <div id="Uber" class="s"><img src="{{services.2.icon.url}}"></div>
           <h4>{{services.2.title}}</h4>
         </div>
         <div>
-          <div id="Air" class="s" style="backrground"></div>
+          <div id="Air" class="s"><img src="{{services.3.icon.url}}"></div>
           <h4>{{services.3.title}}</h4>
         </div>
     </div>
