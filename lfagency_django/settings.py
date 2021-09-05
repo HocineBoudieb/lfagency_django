@@ -43,7 +43,7 @@ else:
     DEBUG= True
 
 
-ALLOWED_HOSTS = ["lfagenct.herokuapp.com"]
+ALLOWED_HOSTS = ["lfagency.herokuapp.com"]
 
 
 # Application definition
