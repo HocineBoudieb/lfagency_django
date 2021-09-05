@@ -149,4 +149,4 @@ if os.environ.get('ENV') == 'PRODUCTION':
     DATABASES['default'].update(db_from_env)
     
 else:
-    DEBUG= True
+    DEBUG= True 
