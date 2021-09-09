@@ -32,7 +32,6 @@ ALLOWED_HOSTS = ['127.0.0.1','lfagency.herokuapp.com']
 # Application definition
 
 INSTALLED_APPS = [ 
-    'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -136,7 +135,8 @@ MEDIA_URL= '/uploads/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 if os.environ.get('ENV') == 'PRODUCTION':
     DEBUG = False
-    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+    #STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+    STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
     PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
     STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
