@@ -32,13 +32,13 @@ ALLOWED_HOSTS = ['127.0.0.1','lfagency.herokuapp.com']
 # Application definition
 
 INSTALLED_APPS = [ 
-    'whitenoise.runserver_nostatic'
+    'whitenoise.runserver_nostatic',
+    'django.contrib.staticfiles',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
     'debug_toolbar',
     'lfapp.apps.LfappConfig',
     'django_cleanup'
