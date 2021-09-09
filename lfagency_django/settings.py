@@ -135,8 +135,7 @@ MEDIA_URL= '/uploads/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 if os.environ.get('ENV') == 'PRODUCTION':
     DEBUG = False
-    #STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-    STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
     PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
     STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
