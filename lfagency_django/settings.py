@@ -126,27 +126,15 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
+
 STATIC_URL = '/static/'
 MEDIA_ROOT= os.path.join(BASE_DIR,'uploads')
 MEDIA_URL= '/uploads/'
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 if os.environ.get('ENV') == 'PRODUCTION':
-    DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-    cloudcube_url = os.environ.get('https://cloud-cube-us2.s3.amazonaws.com/z9bj2j9cp5ya')
-    cloudcube_bucket = os.path.basename(cloudcube_url)   # "bucketname"
-    cloudcube_base_url = os.path.dirname(cloudcube_url)  # "https://cloud-cube.s3.amazonaws.com/" 
-    AWS_S3_ENDPOINT_URL = cloudcube_base_url
-    AWS_ACCESS_KEY_ID = os.environ.get('AKIA37SVVXBHVU6RAZEF')
-    AWS_SECRET_ACCESS_KEY = os.environ.get('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')
-    AWS_STORAGE_BUCKET_NAME = cloudcube_bucket
-    AWS_DEFAULT_ACL = os.environ.get('AWS_DEFAULT_ACL', 'private')
-    AWS_QUERYSTRING_AUTH = False
-    AWS_S3_SIGNATURE_VERSION = "s3v4"
     DEBUG = False
-
     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
     PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
     STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
@@ -160,3 +148,16 @@ if os.environ.get('ENV') == 'PRODUCTION':
     
 else:
     DEBUG= True
+
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+cloudcube_url = os.environ.get('https://cloud-cube-us2.s3.amazonaws.com/z9bj2j9cp5ya')
+cloudcube_bucket = os.path.basename(cloudcube_url)   # "bucketname"
+cloudcube_base_url = os.path.dirname(cloudcube_url)  # "https://cloud-cube.s3.amazonaws.com/" 
+AWS_S3_ENDPOINT_URL = cloudcube_base_url
+AWS_ACCESS_KEY_ID = os.environ.get('AKIA37SVVXBHVU6RAZEF')
+AWS_SECRET_ACCESS_KEY = os.environ.get('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')
+AWS_STORAGE_BUCKET_NAME = cloudcube_bucket
+AWS_DEFAULT_ACL = os.environ.get('AWS_DEFAULT_ACL', 'private')
+AWS_QUERYSTRING_AUTH = False
+AWS_S3_SIGNATURE_VERSION = "s3v4"
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
