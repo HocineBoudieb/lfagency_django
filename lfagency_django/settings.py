@@ -146,8 +146,8 @@ if os.environ.get('ENV') == 'PRODUCTION':
     AWS_QUERYSTRING_AUTH = False
     AWS_S3_SIGNATURE_VERSION = "s3v4"
     DEBUG = False
-    STATICFILES_STORAGE = 'lfapp.storage.PublicStorage'
-    #STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
     PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
     STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
     MEDIA_ROOT= os.path.join(PROJECT_ROOT,'uploads')
