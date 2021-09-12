@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-fp_zus#)d4iv-mbg2%ip-z)cewj_h##^t@-(^oxo7pknkydoi)
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-ALLOWED_HOSTS = ['127.0.0.1','lfagency.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1','lfagency.herokuapp.com','lifestyle-agency.fr']
 
 
 # Application definition
@@ -138,7 +138,6 @@ if os.environ.get('ENV') == 'PRODUCTION':
     cloudcube_url = os.environ.get('https://cloud-cube-us2.s3.amazonaws.com/z9bj2j9cp5ya')
     cloudcube_bucket = os.path.basename(cloudcube_url)   # "bucketname"
     cloudcube_base_url = os.path.dirname(cloudcube_url)  # "https://cloud-cube.s3.amazonaws.com/" 
-
     AWS_S3_ENDPOINT_URL = cloudcube_base_url
     AWS_ACCESS_KEY_ID = os.environ.get('AKIA37SVVXBHVU6RAZEF')
     AWS_SECRET_ACCESS_KEY = os.environ.get('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')
@@ -147,9 +146,9 @@ if os.environ.get('ENV') == 'PRODUCTION':
     AWS_QUERYSTRING_AUTH = False
     AWS_S3_SIGNATURE_VERSION = "s3v4"
     DEBUG = False
-    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+    STATICFILES_STORAGE = 'lfapp.storage.PublicStorage'
+    #STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
     PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
-
     STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
     MEDIA_ROOT= os.path.join(PROJECT_ROOT,'uploads')
     # Extra places for collectstatic to find static files.
