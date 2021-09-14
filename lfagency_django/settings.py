@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-fp_zus#)d4iv-mbg2%ip-z)cewj_h##^t@-(^oxo7pknkydoi)
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-ALLOWED_HOSTS = ['127.0.0.1','lifestyle-agency.fr']
+ALLOWED_HOSTS = ['127.0.0.1','www.lifestyle-agency.fr']
 
 
 # Application definition
