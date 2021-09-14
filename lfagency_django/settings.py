@@ -134,7 +134,7 @@ MEDIA_URL= '/uploads/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 if os.environ.get('ENV') == 'PRODUCTION':
-    DEBUG = False
+    DEBUG = True
     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
     PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
     STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
