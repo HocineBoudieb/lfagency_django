@@ -135,6 +135,7 @@ img{
 }
 .item-active img{
   height: 80vh;
+  object-fit: cover;
 }
 .container{
   top: 0;
