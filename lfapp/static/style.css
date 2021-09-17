@@ -143,11 +143,9 @@ img{
   height: 80vh;
 }
 .item-active img{
-  height: 80vh;
   object-fit: cover;
 }
 .item img{
-  height: 80vh;
   object-fit: cover;
 }
 .container{
@@ -437,12 +435,6 @@ textarea{
     height: 40vh;
   }
   .item{
-    height: 40vh;
-  }
-  .item-active img{
-    height: 40vh;
-  }
-  .item img{
     height: 40vh;
   }
   .about{
