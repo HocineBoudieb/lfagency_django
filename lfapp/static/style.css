@@ -437,6 +437,11 @@ textarea{
   .item{
     height: 40vh;
   }
+  .fill{
+    width: 100vw;
+    height: 40vh;
+    object-fit: cover;
+  }
   .about{
     height: auto;
     font-size: 8px;
