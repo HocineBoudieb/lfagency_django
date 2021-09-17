@@ -133,7 +133,20 @@ img{
   width: 100vw;
   height: 80vh;
 }
+.item{
+  top: 0;
+  position: relative;
+  z-index: 0;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 80vh;
+}
 .item-active img{
+  height: 80vh;
+  object-fit: cover;
+}
+.item img{
   height: 80vh;
   object-fit: cover;
 }
@@ -423,7 +436,13 @@ textarea{
   .item-active{
     height: 40vh;
   }
+  .item{
+    height: 40vh;
+  }
   .item-active img{
+    height: 40vh;
+  }
+  .item img{
     height: 40vh;
   }
   .about{
