@@ -147,6 +147,7 @@ img{
   object-fit: cover;
 }
 .item img{
+  height: 100vh;
   object-fit: cover;
 }
 .container{
