@@ -143,13 +143,11 @@ img{
   height: 80vh;
 }
 .item-active img{
-  height: 100vh;
+  min-height: 80vh;
+  min-width: 100vw;
   object-fit: cover;
 }
-.item img{
-  height: 100vh;
-  object-fit: cover;
-}
+
 .container{
   top: 0;
   margin: 0;
