@@ -133,6 +133,9 @@ img{
   width: 100vw;
   height: 80vh;
 }
+.item-active img{
+  height: 80vh;
+}
 .container{
   top: 0;
   margin: 0;
@@ -417,6 +420,9 @@ textarea{
   font-size: 10px;
 }
   .item-active{
+    height: 40vh;
+  }
+  .item-active img{
     height: 40vh;
   }
   .about{
