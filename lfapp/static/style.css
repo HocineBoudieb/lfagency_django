@@ -142,9 +142,9 @@ img{
   width: 100vw;
   height: 80vh;
 }
-.item-active img{
-  min-height: 80vh;
-  min-width: 100vw;
+.fill{
+  width: 100vw;
+  height: 80vh;
   object-fit: cover;
 }
 
