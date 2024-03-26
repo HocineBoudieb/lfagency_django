@@ -1,6 +1,10 @@
 # LF Agency
+## Overview
 
-Welcome to LF Agency - your premier destination for luxury vehicle rentals, exquisite apartments, and more. LF Agency is a fictive luxurious agency offering a curated selection of high-end vehicles, luxurious apartments, and other upscale services. Our website is built using Django framework with AWS S3 database, providing a seamless and secure experience for our clients.
+LF Agency is a fictive agency designed to provide a simulated experience in building and managing a luxury rental service website using Django framework. While the services and offerings described on this website are not real, they serve as a practical training ground for aspiring Django developers to enhance their skills in web development.
+
+Welcome to LF Agency - your premier destination for luxury vehicle rentals, exquisite apartments, and more. LF Agency is a fictive luxurious agency offering a curated selection of high-end vehicles, luxurious apartments, and other upscale services. Please note that LF Agency is a fictive website created solely for the purpose of training in Django framework development.
+
 
 ## Technologies Used
 
